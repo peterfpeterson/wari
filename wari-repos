@@ -1,0 +1,8 @@
+if [ "$WARI_DISTRO" == "fedora" ]; then
+    WARI_REPOS="rpmfusion-free rpmfusion-nonfree fedora-nvidia google-chrome"
+elif [[ $WARI_DISTRO == *"Red Hat Enterprise Linux"* ]]; then
+    WARI_REPOS="epel rpmfusion"
+else
+    echo "Do not know codename '$RELEASE'"
+    exit 1
+fi

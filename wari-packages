@@ -1,0 +1,10 @@
+WARI_PACKAGES="morebin"
+
+if [ "$WARI_DISTRO" == "fedora" ]; then
+    WARI_PACKAGES="$WARI_PACKAGES otherstuff"
+elif [[ $WARI_DISTRO == *"Red Hat Enterprise Linux"* ]]; then
+    WARI_PACKAGES="$WARI_PACKAGES otherstuff"
+else
+    echo "Do not know codename '$RELEASE'"
+    exit 1
+fi
